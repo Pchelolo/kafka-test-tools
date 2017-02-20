@@ -1,0 +1,42 @@
+{
+  "author": {
+    "name": "Petr Pchelko",
+    "email": "ppchelko@wikimedia.org"
+  },
+  "bugs": {
+    "url": "https://github.com/Pchelolo/kafka-test-tools/issues"
+  },
+  "dependencies": {},
+  "description": "Tools for kafka management in test environment",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "69aa740c9fafc913e3d2ab61e784aa6f30fab1b9",
+    "tarball": "https://registry.npmjs.org/kafka-test-tools/-/kafka-test-tools-0.1.0.tgz"
+  },
+  "gitHead": "6cbd30626d48c883d0d017f22c2011abe6802ab6",
+  "homepage": "https://github.com/Pchelolo/kafka-test-tools#readme",
+  "keywords": [
+    "kafka",
+    "test",
+    "wikimedia"
+  ],
+  "license": "Apache-2.0",
+  "maintainers": [
+    {
+      "name": "pchelolo",
+      "email": "petrpchelko@gmail.com"
+    }
+  ],
+  "name": "kafka-test-tools",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pchelolo/kafka-test-tools.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.1.1"
+}
