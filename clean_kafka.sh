@@ -29,7 +29,7 @@ createTopic ( ) {
 check ( ) {
   PORT=$1
   SERVICE_NAME=$2
-  if [ `nc localhost ${PORT} < /dev/null; echo $?` != 0 ]; then
+  if [ `nc -z localhost ${PORT}; echo $?` != 0 ]; then
     echo "${SERVICE_NAME} not running, start it first with npm run start-kafka"
     exit 1
   fi
