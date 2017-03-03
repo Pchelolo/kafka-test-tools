@@ -8,7 +8,7 @@ fi
 if [ "$1" = "start" ]; then
   if [ `nc localhost 2181 < /dev/null; echo $?` != 0 ]; then
     sh $KAFKA_HOME/bin/zookeeper-server-start.sh $KAFKA_HOME/config/zookeeper.properties > /dev/null &
-    while [ `nc localhost 2181 < /dev/null; echo $?` != 0 ]; do
+    while [ `nc -z localhost 2181; echo $?` != 0 ]; do
       echo "waiting for Zookeeper..."
       sleep 1 ;
     done
@@ -18,7 +18,7 @@ if [ "$1" = "start" ]; then
 
   if [ `nc localhost 9092 < /dev/null; echo $?` != 0 ]; then
     sh $KAFKA_HOME/bin/kafka-server-start.sh $KAFKA_HOME/config/server.properties > /dev/null &
-    while [ `nc localhost 9092 < /dev/null; echo $?` != 0 ]; do
+    while [ `nc -z localhost 9092; echo $?` != 0 ]; do
       echo "waiting for Kafka..." ;
       sleep 1 ;
     done
