@@ -10,6 +10,6 @@ if [ "x$KAFKA_VERSION" = "x" ]; then
   exit 1
 fi
 
-wget http://www.us.apache.org/dist/kafka/${KAFKA_VERSION}/kafka_2.10-${KAFKA_VERSION}.tgz -O kafka.tgz
+wget https://archive.apache.org/dist/kafka/${KAFKA_VERSION}/kafka_2.10-${KAFKA_VERSION}.tgz -O kafka.tgz
 mkdir -p ${KAFKA_HOME} && tar xzf kafka.tgz -C ${KAFKA_HOME} --strip-components 1
 echo 'delete.topic.enable=true' >> ${KAFKA_HOME}/config/server.properties
