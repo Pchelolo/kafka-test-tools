@@ -19,9 +19,10 @@ dropTopics ( ) {
 
 createTopic ( ) {
     echo "Creating topic ${1}"
+    PARTITIONS=${2:-1}
     ${KAFKA_HOME}/bin/kafka-topics.sh --create \
         --zookeeper 127.0.0.1:2181             \
-        --partitions 1                         \
+        --partitions ${PARTITIONS}             \
         --replication-factor 1                 \
         --topic $1 > /dev/null &
 }
