@@ -12,4 +12,5 @@ fi
 
 wget --tries=10 --retry-connrefused --waitretry=1 https://archive.apache.org/dist/kafka/${KAFKA_VERSION}/kafka_2.11-${KAFKA_VERSION}.tgz -O kafka.tgz
 mkdir -p ${KAFKA_HOME} && tar xzf kafka.tgz -C ${KAFKA_HOME} --strip-components 1
-echo -e 'delete.topic.enable=true' >> ${KAFKA_HOME}/config/server.properties
+echo $'\n' >> ${KAFKA_HOME}/config/server.properties
+echo 'delete.topic.enable=true' >> ${KAFKA_HOME}/config/server.properties
