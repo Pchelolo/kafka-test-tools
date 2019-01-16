@@ -9,5 +9,5 @@ dependent on Apache Kafka.
     kafka version string.
 2. `clean_kafka.sh` - contains several functions to check whether kafka 
     is running, drop topics and create topics.
-3. `start_kafka.sh` - starts Zookeeper and Kafka and waits for them to 
+3. `start_kafka.sh start|stop|kill` - starts Zookeeper and Kafka and waits for them to 
     be ready.

@@ -1,7 +1,22 @@
 #!/bin/bash
 
+if [ $# -eq 0 ]; then
+    echo "USAGE: start_kafka.sh start|stop|kill"
+    exit 1
+fi
+
 if [ "x$KAFKA_HOME" = "x" ]; then
   echo "Please set KAFKA_HOME env variable to the kafka install directory"
+  exit 1
+fi
+
+if [ ! -x "$(command -v nc)" ]; then
+  echo "Please install Netcat (nc) first"
+  exit 1
+fi
+
+if [ ! -x "$(command -v java)" ]; then
+  echo "Please install OpenJDK 8+ first"
   exit 1
 fi
 
