@@ -38,5 +38,9 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
+# Exclude IDEs
 .idea
+.vscode
 
+# Prevent accidental Kafka commit
+kafka.tgz
